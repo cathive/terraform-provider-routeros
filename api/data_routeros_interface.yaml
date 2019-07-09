@@ -1,0 +1,35 @@
+name_terraform: "data_routeros_interface"
+name_golang: "interface"
+
+api_identifier_field: "name"
+api_path: "/interface"
+
+schema:
+  - name: name
+    description: Name of the interface
+    value_type: string
+    required: true
+  - name: comment
+    description: User comment provided for the interface
+    value_type: string
+    optional: true
+  - name: type
+    description: Type of the interface
+    value_type: string
+    computed: true
+  - name: mtu
+    description: Maximum transmission unit in bytes or "auto"
+    value_type: string
+    computed: true
+  - name: l2mtu
+    description: The maximum size of the frame without MAC header that can be sent by this interface
+    value_type: int
+    computed: true
+  - name: default_name
+    description: ""
+    value_type: string
+    computed: true
+  - name: mac_address
+    description: MAC address
+    value_type: string
+    computed: true

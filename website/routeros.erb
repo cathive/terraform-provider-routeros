@@ -1,0 +1,30 @@
+<% wrap_layout :inner do %>
+    <% content_for :sidebar do %>
+        <div class="docs-sidebar hidden-print affix-top" role="complementary">
+            <ul class="nav docs-sidenav">
+                <li<%= sidebar_current("docs-home") %>>
+                    <a href="/docs/providers/index.html">All Providers</a>
+                </li>
+
+                <li<%= sidebar_current("docs-routeros-index") %>>
+                    <a href="/docs/providers/routeros/index.html">RouterOS Provider</a>
+                </li>
+
+                <li<%= sidebar_current("docs-routeros-datasource") %>>
+                <a href="#">Data Sources</a>
+                    <ul class="nav nav-visible">
+
+                        <li<%= sidebar_current("docs-routeros-datasource-interface") %>>
+                            <a href="/docs/providers/routeros/d/interface.html">routeros_interface</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    <% end %>
+
+    <%= yield %>
+<% end %>

@@ -1,0 +1,21 @@
+# Go dependencies
+/vendor/
+
+# Binaries
+/.bin/
+
+# Log files
+*.log
+
+# Auto-generated sources
+/routeros/zzz_*.go
+
+# Terraform tests
+/*.tf
+.terraform/
+*.tfstate*
+/terraform-provider-routeros
+
+# IntelliJ IDEA configuration
+/.idea/
+*.iml
