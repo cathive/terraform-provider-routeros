@@ -35,7 +35,7 @@ func Provider() terraform.ResourceProvider {
 			"username": {
 				Description: "Username to be used for accessing the RouterOS device",
 				Type:        schema.TypeString,
-				DefaultFunc: schema.EnvDefaultFunc("ROUTEROS_USERNAME", ""),
+				DefaultFunc: schema.EnvDefaultFunc("ROUTEROS_USERNAME", "admin"),
 				Optional:    true,
 				Default:     "admin",
 			},
@@ -49,6 +49,7 @@ func Provider() terraform.ResourceProvider {
 			"tls": {
 				Description: "Whether to use transport layer security or not",
 				Type:        schema.TypeBool,
+				DefaultFunc: schema.EnvDefaultFunc("ROUTEROS_TLS", false),
 				Optional:    true,
 				Default:     false,
 			},
