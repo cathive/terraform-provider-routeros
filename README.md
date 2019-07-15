@@ -15,7 +15,7 @@ $ mkdir -p ~/Projects; cd ~/Projects
 $ git clone git@github.com:cathive/terraform-provider-routeros.git
 ```
 
-Enter the provider directory and build the provider
+Enter the provider directory and build the provider.
 
 ```sh
 # Build the provider plugin

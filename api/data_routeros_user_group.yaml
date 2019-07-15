@@ -5,20 +5,20 @@ api_identifier_field: "name"
 api_path: "/user/group"
 
 schema:
-  - name: name
-    description: Name of the user group
-    value_type: string
-    required: true
-  - name: comment
-    description: Description of the user group
-    value_type: string
-    computed: true
-  - name: policy
-    description: Policies attached to the user group
-    value_type: map
-    elem: bool
-    computed: true
-  - name: skin
-    description: ""
-    value_type: string
-    computed: true
+	- name: name
+	  description: Name of the user group
+	  value_type: string
+	  required: true
+	- name: comment
+	  description: Description of the user group
+	  value_type: string
+	  computed: true
+	- name: policy
+	  description: Policies attached to the user group
+	  value_type: map
+	  elem: bool
+	  computed: true
+	- name: skin
+	  description: ""
+	  value_type: string
+	  computed: true

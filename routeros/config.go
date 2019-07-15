@@ -53,6 +53,12 @@ func (cfg *config) Client() (Client, error) {
 
 // NewConfig creates a new configuration structure to be used provider-internally.
 func NewConfig(address string, port string, username string, password string, tlsEnabled bool) (Config, error) {
+	if address == "" {
+		return nil, fmt.Errorf("address must not be empty")
+	}
+	if port == "" {
+		return nil, fmt.Errorf("port must not be empty")
+	}
 	cfg := config{
 		address:  address,
 		port:     port,

@@ -2,6 +2,7 @@ package routeros
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -33,4 +34,23 @@ func stringToBoolMap(ps string) map[string]bool {
 		}
 	}
 	return policies
+}
+
+func boolMapToString(m map[string] bool) string {
+	lst := make([]string, len(m))
+	idx := 0
+	for key, val := range m {
+		if val {
+			lst[idx] = key
+		} else {
+			lst[idx] = fmt.Sprintf("!%s", key)
+		}
+		idx++
+	}
+
+	// We sort the list to make sure that the output is predictable/reproducible.
+	// TODO The sort order should match the RouterOS API sort order.
+	sort.Strings(lst)
+
+	return strings.Join(lst, ",")
 }
