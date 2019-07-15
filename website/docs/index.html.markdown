@@ -30,6 +30,9 @@ variables in order to keep credential information out of the configuration.
 * `password` - (Optional) Passsword to be used.
   May be set via the `ROUTEROS_PASSWORD` environment variable.
 
+* `tls` - (Optional) Whether to enable transport layer security or not.
+  May be set via the `ROUTEROS_TLS` environment variable.
+
 ## Example Usage
 
 ```hcl
