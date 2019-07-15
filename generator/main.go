@@ -55,7 +55,9 @@ type MetaSchema struct {
 }
 
 func main() {
-	fmt.Fprintf(os.Stdout, "Generating sources...\n")
+	if _, err := fmt.Fprintf(os.Stdout, "Generating sources...\n"); err != nil {
+		panic(err)
+	}
 	data, err := ioutil.ReadFile(fmt.Sprintf("%s/data_provider.go.tpl", os.Args[1]))
 	if err != nil {
 		panic(err)
@@ -88,7 +90,9 @@ func main() {
 		}
 		defer file.Close()
 		var dd DataDefinition
-		fmt.Fprintf(os.Stdout, "* %s ...\n", filename)
+		if _, err = fmt.Fprintf(os.Stdout, "* %s ...\n", filename); err != nil {
+			panic(err)
+		}
 		if err := yaml.NewDecoder(file).Decode(&dd); err != nil {
 			panic(err)
 		}
