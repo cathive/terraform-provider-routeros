@@ -1,3 +1,4 @@
+---
 name_terraform: "data_routeros_ip_address"
 name_golang: "ipAddress"
 
@@ -5,15 +6,16 @@ api_identifier_field: "address"
 api_path: "/ip address"
 
 schema:
-	- name: address
-	  description: IP address CIDR range
-	  value_type: string
-	  required: true
-	- name: network
-	  description: IP network
-	  value_type: string
-	  computed: true
-	- name: interface
-	  description: Name of the interface that this address is bound to
-	  value_type: string
-	  computed: true
+- name: address
+  description: IP address CIDR range
+  value_type: string
+  required: true
+- name: network
+  description: IP network
+  value_type: string
+  computed: true
+- name: interface
+  description: Name of the interface that this address is bound to
+  value_type: string
+  computed: true
+...

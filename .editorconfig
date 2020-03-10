@@ -9,3 +9,7 @@ indent_size = 4
 
 [Makefile]
 indent_size = 8
+
+[*.yaml]
+indent_style = space
+indent_size = 2
